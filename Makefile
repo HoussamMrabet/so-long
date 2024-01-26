@@ -37,7 +37,7 @@ $(LIBFT) :
 	@make -C libft
 
 
-%.o: %.c get_next_line.h so_long.h so_long_bonus.h
+%.o: %.c get_next_line.h so_long.h so_long_bonus.h libft/libft.a
 	$(CC) $(INCLUDES) -c $< -o $@
 
 clean :
@@ -53,4 +53,4 @@ fclean :
 
 re : fclean all
 
-.PHONY : clean fclean  $(LIBFT)
+.PHONY : clean fclean $(LIBFT)
